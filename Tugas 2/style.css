@@ -159,7 +159,7 @@ footer p {
 
 /* Media Query*/
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
   header {
     padding: 10px;
     justify-content: start;
@@ -174,10 +174,11 @@ footer p {
   main .jumbotron {
     justify-content: center;
     padding: 5px;
+    align-items: center;
     min-height: 300px;
   }
-  .jumbotron .typo {
-    font-size: 24px;
+  main .jumbotron .typo h1 {
+    font-size: 40px;
     text-align: center;
   }
   .content-res .left {
@@ -186,11 +187,14 @@ footer p {
   .content-res .left .wrapper {
     margin: 5px;
   }
-
+  .card {
+    min-height: 100px;
+  }
   .left .wrapper h2 {
     border-bottom: 0.5px solid #fff;
-    font-size: 40px;
+    font-size: 32px;
     font-family: "Montserrat-Black";
+    text-align: center;
   }
   .left .wrapper .desc {
     width: 70%;
@@ -198,9 +202,14 @@ footer p {
   .left .wrapper .desc p {
     font-size: 16px;
     text-align: justify;
+    line-height: 20px;
   }
   .content-res .right {
     display: none;
+  }
+  .content-how h2 {
+    font-size: 30px;
+    width: 80%;
   }
   .container {
     flex-direction: column;
@@ -208,6 +217,39 @@ footer p {
     justify-content: space-around;
   }
   footer {
-    min-height: 200px;
+    min-height: 150px;
+  }
+}
+@media screen and (max-width: 960px) and (min-width: 480px) {
+  main .jumbotron {
+    align-items: center;
+  }
+  main .jumbotron .typo h1 {
+    font-size: 60px;
+  }
+  main .left .wrapper h2,
+  main .content-how h2 {
+    font-size: 48px;
+  }
+  main .content-how h2 {
+    width: 70%;
+  }
+  main .right .wrapper .image {
+    background-position: center;
+  }
+  main .content-how .container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .card {
+    min-width: 50%;
+  }
+  main .content-how .container .card h3 {
+    font-size: 36px;
+  }
+  .card p {
+    font-size: 20px;
+    line-height: 24px;
   }
 }
