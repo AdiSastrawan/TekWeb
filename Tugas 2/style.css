@@ -79,6 +79,11 @@ main .content-res {
   margin: 16px;
   justify-content: center;
 }
+.content-res .right .wrapper {
+  display: flex;
+  margin: 16px;
+  justify-content: center;
+}
 .left .wrapper .title {
   width: 80%;
 }
@@ -93,8 +98,9 @@ main .content-res {
   font-size: 24px;
   font-family: "Montserrat-Medium";
 }
-.content-res .right .wrapper {
+.content-res .right .wrapper .image {
   min-height: 400px;
+  width: 80%;
   background-image: url(image/1.jpg);
   background-size: cover;
 }
@@ -191,7 +197,6 @@ footer p {
   }
   .left .wrapper .desc p {
     font-size: 16px;
-    width: fit-content;
     text-align: justify;
   }
   .content-res .right {
