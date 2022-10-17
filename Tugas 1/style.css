@@ -1,0 +1,184 @@
+@font-face {
+  font-family: "Roboto-Medium";
+  src: url("font/Roboto-Medium.ttf");
+  font-weight: 300;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto-Medium", sans-serif;
+}
+h1,
+h2,
+h3 {
+  font-weight: normal;
+}
+h1 {
+  font-size: 72px;
+  font-weight: bold;
+  padding: 10px;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+body {
+  background-color: #1b1b1b;
+  min-height: 800px;
+}
+.container {
+  width: 80%;
+  margin-inline: auto;
+  margin-top: 10px;
+}
+.right {
+  float: right;
+  width: 30%;
+  min-height: 500px;
+}
+.left {
+  float: left;
+  width: 69%;
+}
+main {
+  margin-bottom: 5px;
+}
+nav ul {
+  float: left;
+  border-radius: 0px 0px 10px 10px;
+  list-style: none;
+  width: 100%;
+  min-height: 50px;
+  background-color: #292929;
+}
+nav ul li {
+  margin: 0px 40px;
+  line-height: 50px;
+  float: left;
+}
+nav ul li a {
+  font-size: 24px;
+  color: white;
+}
+.jumbotron {
+  width: 100%;
+  min-height: 200px;
+  border-radius: 10px 10px 0px 0px;
+  background-color: #ffa31a;
+}
+.jumbotron h1 {
+  text-align: center;
+  line-height: 100px;
+  font-weight: bold;
+}
+.card {
+  display: inline-block;
+  border-radius: 10px;
+}
+.right .card {
+  background-color: #292929;
+  margin-top: 5px;
+  width: 100%;
+  min-height: 300px;
+  text-align: center;
+}
+.right .card ul li {
+  color: #fff;
+  text-decoration: none;
+  list-style: none;
+  padding-block: 20px;
+}
+.right .card ul li a {
+  font-size: 24px;
+}
+
+.left .card h2 {
+  text-align: center;
+  margin: 6px;
+  color: #1b1b1b;
+  border-bottom: 2px solid #1b1b1b;
+}
+.right .card h2 {
+  text-align: center;
+  margin: 6px;
+  color: #fff;
+  border-bottom: 2px solid #fff;
+}
+.left .card {
+  background-color: #ffa31a;
+  margin-top: 5px;
+  width: 100%;
+  min-height: 600px;
+}
+.input-form {
+  margin: 10px auto;
+  width: 80%;
+  font-size: 20px;
+  min-height: 100px;
+  color: #000;
+}
+input,
+label,
+textarea {
+  margin: 7px 70px;
+  padding: 10px;
+  border: none;
+}
+input {
+  border-radius: 5px;
+  height: 30px;
+}
+textarea {
+  border-radius: 5px;
+}
+.right .card h2 {
+  font-size: 24px;
+}
+.left .card h2 {
+  font-size: 32px;
+}
+.check {
+  margin: 7px 70px;
+}
+.check label,
+.check input {
+  margin: 0;
+  height: auto;
+}
+footer {
+  width: 100%;
+  min-height: 100px;
+  background-color: #292929;
+  border-radius: 5px;
+  text-align: center;
+  color: #fff;
+}
+footer heart {
+  color: red;
+  text-decoration: none;
+  font-style: none;
+}
+.clear {
+  clear: both;
+}
+#submit {
+  background-color: #292929;
+  color: #fff;
+  border: none;
+  font-size: 20px;
+  width: 100px;
+  height: 50px;
+  border-radius: 10px;
+}
+header p.gambar {
+  text-align: center;
+  padding: 10px;
+}
+header img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+}
