@@ -19,7 +19,7 @@ $beda=0;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./src/style.css" />
 
-    <title>JQuery</title>
+    <title>Baris Aritmatika</title>
   </head>
   <body class="bg-black">
     <header class="h-32 w-full bg-black">
