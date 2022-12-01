@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/output.css" />
+    <title>KosKita</title>
+  </head>
+  <body class="lg:text-base text-sm">
+    <header class="px-8 py-3 lg:px-10">
+      <nav class="flex justify-between lg:text-xl">
+        <h1 class="">Ini logo</h1>
+        <ul class="flex space-x-3">
+          <li><a href="index.html">Home</a></li>
+          <li class=""><a href="/rooms.html">Kamar</a></li>
+          <li><a href="/book.html">Book Now</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="bg-[url('img/2.jpeg')] bg-cover py-5">
+      <h1 class="text-center pt-6 font-bold text-4xl">SEWA KOS</h1>
+      <div class="min-h-[300px] flex justify-center my-8">
+        <div class="bg-white border-solid border p-5 rounded-md border-stone-500 w-3/4 lg:w-1/2">
+          <form class="" action="">
+            <div class="flex flex-col space-y-3">
+              <label for="" class="font-bold">Nama </label>
+              <input type="text" class="border-solid border pl-2 rounded-md border-stone-500" />
+              <label class="font-bold" for="">Pilih Paket</label>
+              <table>
+                <tr>
+                  <td><input class="mr-1" type="radio" name="paket" id="paket1" />Paket 1</td>
+                </tr>
+                <tr>
+                  <td><input class="mr-1" type="radio" name="paket" id="paket2" />Paket 2</td>
+                </tr>
+                <tr>
+                  <td><input class="mr-1" type="radio" name="paket" id="paket3" />Paket 3</td>
+                </tr>
+                <tr>
+                  <td><input class="mr-1" type="radio" name="paket" id="custom" />Custom</td>
+                </tr>
+              </table>
+              <div class="hidden" id="lama">
+                <label for="" class="font-bold">Lama Penyewaan </label>
+                <select class="border-solid border rounded-lg w-1/2 border-stone-500" name="lamaP" id="lamaP">
+                  <option value="week1">1 Minggu</option>
+                  <option value="month1">1 Bulan</option>
+                  <option value="tahun1">1 Tahun</option>
+                </select>
+              </div>
+              <div id="jkamar" class="hidden">
+                <label for="" class="font-bold">Jenis Kamar </label>
+                <select class="border-solid border rounded-lg w-1/2 border-stone-500" name="jenis" id="jenis">
+                  <option value="3x3">Ukuran 3x3</option>
+                  <option value="3x4">Ukuran 3x4</option>
+                  <option value="4x4">Ukuran 4x4</option>
+                </select>
+              </div>
+              <div id="jfas" class="hidden">
+                <label for="" class="font-bold">Jenis Fasilitas </label>
+                <div>
+                  <table>
+                    <tr>
+                      <td><input type="checkbox" name="jenis" id="jenis" />Kamar Mandi Dalam</td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="jenis" id="jenis" />Lemari</td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="jenis" id="jenis" />Meja</td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="jenis" id="jenis" />Air Conditioner</td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="jenis" id="jenis" />Tanggungan Listrik</td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="jenis" id="jenis" />Tanggungan Air</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+
+              <label for="" class="font-bold">Harga total</label>
+              <input type="text" class="border-solid border w-1/2 rounded-md border-stone-500 pl-2" placeholder="Rp.0" id="total" readonly />
+              <input type="submit" class="border-solid border rounded-lg w-1/2 mx-auto border-stone-500" value="Order" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer class="bg-black pb-5 text-stone-300 text-xs">
+      <div class="lg:grid lg:grid-rows-1 lg:grid-cols-4 p-10 flex flex-col space-y-8">
+        <div>
+          <h2 class="text-xl">KOSKITA</h2>
+          <p>Kos murah Lingkungan ramah</p>
+        </div>
+        <div class="">
+          <h2>Social media</h2>
+          <ul>
+            <li>Instagram</li>
+            <li>Facebook</li>
+            <li>Twitter</li>
+          </ul>
+        </div>
+        <div class="">
+          <h2>Contact Person</h2>
+          <ul>
+            <li>+6290874112</li>
+          </ul>
+        </div>
+        <div class="w-20">
+          <h2>Support Us</h2>
+          <ul>
+            <li>FAQS</li>
+            <li>Trade Program</li>
+            <li>FAQS</li>
+          </ul>
+        </div>
+      </div>
+      <div class="flex px-10 space-x-3">
+        <p>&copy KOSKITA 2022</p>
+        <a href="">Terms of Service </a>
+        <p>.</p>
+        <a href="">Privacy Policy </a>
+      </div>
+    </footer>
+  </body>
+  <script src="/app.js"></script>
+</html>
