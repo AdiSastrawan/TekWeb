@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RoomController;
 use App\Http\Controllers\BookController;
@@ -20,10 +21,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[HomeController::class, 'index'])->name('home');
 Route::get('/room',[RoomController::class, 'index'])->name('room');
 Route::get('/book',[BookController::class, 'index'])->middleware(['auth', 'verified'])->name('book');
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::post('/order',[BookController::class, 'store'])->middleware(['auth', 'verified'])->name('order');
+Route::get('/user',[DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('userdashboard');
+Route::get('/edit',[DashboardController::class, 'editPage'])->middleware(['auth', 'verified'])->name('userdashboard.edit');
+Route::get('/user/{id}',[DashboardController::class, 'removeRent'])->middleware(['auth', 'verified'])->name('userdashboard.delete');
+Route::put('/user/{id}',[DashboardController::class,'update'])->middleware(['auth', 'verified'])->name('userdashboard.update');
 
 Route::get('/welcome', function () {
     return view('welcome');

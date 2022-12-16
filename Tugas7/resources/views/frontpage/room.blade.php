@@ -89,7 +89,7 @@
                       </ul>
                       <h3 class="text-center border-solid border  rounded-xl p-2 border-stone-500"><?php echo "Rp " . number_format($type->costs,2,',','.');?>/bulan</h3>
                       <p class="pt-2 text-center">
-                          <a class=" border-solid border  rounded-md p-2 border-stone-500" href="{{route('book')}}">Pilih </a>
+                          <a class=" border-solid border  rounded-md p-2 border-stone-500 hover:bg-stone-500 hover:text-white transition-all" href="{{route('book')}}">Pilih </a>
                       </p>
                       <h3 class="text-center border-solid border  rounded-xl p-2 border-stone-500">Available room : {{$type->available}}</h3>
                   </div>

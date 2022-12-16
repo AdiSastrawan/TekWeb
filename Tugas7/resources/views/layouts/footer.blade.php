@@ -1,4 +1,4 @@
-<footer class="bg-black pb-5 text-stone-300 text-xs">
+<footer class="bg-black pb-5 text-stone-300 text-xs min-h-max">
     <div class="lg:grid lg:grid-rows-1 lg:grid-cols-4 p-10 flex flex-col space-y-8  ">
       <div><h2 class="text-xl ">KOSKITA</h2><p>Kos murah Lingkungan ramah</p></div>
       <div class=""><h2>Social media</h2>

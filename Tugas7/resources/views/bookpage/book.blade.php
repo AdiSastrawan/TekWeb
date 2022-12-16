@@ -1,51 +1,40 @@
 <x-header-layout>
     <main class="bg-[url('img/2.jpeg')] bg-cover py-5" style="background-image:url('{{asset('template')}}/img/2.jpeg')">
-        <h1 class="text-center pt-6 font-bold text-4xl">SEWA KOS</h1>
+        <h1 class="text-center pt-6 font-bold text-4xl">PILIH KAMAR</h1>
         <div class="min-h-[300px] flex justify-center my-8">
           <div class="bg-white border-solid border p-5 rounded-md border-stone-500 w-3/4 lg:w-1/2">
-            <form class="" action="">
+            <form class="" method="POST" action="{{route('order')}}">
+              @csrf
               <div class="flex flex-col space-y-3">
-                  <label for="" class="font-bold">Nama </label>
-                <div>
-                    <input type="text" class="border-solid border pl-2 rounded-md border-stone-500 w-1/2" placeholder="Nama"/>
-                </div>
+                  
                 <label class="font-bold" for="">Pilih Tipe</label>
                 <table>
-                  @foreach($room as $r)
+                 
+                  @foreach($rooms as $r)
+                  
                   @if($r->available>0)
-                  <tr>
-                    <td><input class="mr-1" type="radio" name="paket" id="paket{{$loop->iteration}}" /><label class="pl-1"for="">Tipe {{$loop->iteration}}</label>
+                  <tr >
+                    
+                    <td><input class="mr-1" type="radio" name="paket" id="paket{{$loop->iteration}}" value="{{$r->id_room_type}}" /><label class="pl-1"for="">Tipe {{$loop->iteration}}</label>
                       <div id="desc_{{$loop->iteration}}"class=" hidden min-w-fit w-fit ml-4 border-solid border p-5 rounded-md border-stone-500 bg-white flex justify-center my-2 ">
                       <div class="space-y-3 ml-2">
-                        <ul class="list-disc">
-                          <div class="space-y-2">
-                            <li>{{$r->facility["size"]}}</li>
-                            @if($r->facility["toilet"]==true)
-                            <li>Kamar Mandi Dalam</li>
-                            @endif
-                            @if($r->facility["cupboard"]==true)
-                            <li>Lemari</li>
-                            @endif
-                            @if($r->facility["table"]==true)
-                            <li>Meja kerja</li>
-                            @endif
-                            @if($r->facility["ac"]==true)
-                            <li>Air Conditioner</li>
-                            @endif
-                            @if($r->facility["electricity"]==true)
-                            <li>Tanggungan Listrik</li>
-                            @endif
-                            @if($r->facility["water"]==true)
-                              <li>
-                                Tanggungan Air
-                              </li>
-                            @endif
-                                </div>
-                            </ul>
+                              
+                              <label for="">Pilih Kamar : </label>  
+                              <select name="room" id="room" > 
+                                
+                                <option value="uwu" disabled selected>---Pilih Kamar---</option> 
+                                @foreach($r->room as $key)
+                                @if($key->occupied==false)
+                                <option value="{{$key->id_room}}">No.{{$key->room_number}}</option>
+                                @endif 
+                                @endforeach
+                              </select>
+                            
                             <h3 class="text-center border-solid border  rounded-xl p-2 border-stone-500">{{"Rp " . number_format($r->costs,2,',','.');}}/bulan</h3>
                             <h3 class="text-center border-solid border  rounded-xl p-2 border-stone-500">Available room : {{$r->available}}</h3>
                         </div>
                     </div> </td>
+                   
                   </tr>
                   @endif
                   @endforeach
